@@ -1,0 +1,51 @@
+{
+  "name": "odoo-plugin",
+	"displayName": "Odoo Plugin",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.57.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [{
+            "command": "odoo-plugin.helloWorld",
+            "title": "Hello World"
+
+		}],
+		"colors": [
+			{
+				"id": "myextension.largeNumberBackground",
+				"description": "Background decoration color for large numbers",
+				"defaults": {
+					"dark": "#FF000055",
+					"light": "#FF000055",
+					"highContrast": "#FF000055"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+        "@types/vscode": "^1.57.1",
+        "@types/glob": "^7.1.4",
+        "@types/mocha": "^9.0.0",
+        "@types/node": "14.x",
+        "eslint": "^7.32.0",
+        "glob": "^7.1.7",
+        "mocha": "^9.1.1",
+        "typescript": "^4.4.3",
+        "@vscode/test-electron": "^1.6.2"
+    }
+
+}
